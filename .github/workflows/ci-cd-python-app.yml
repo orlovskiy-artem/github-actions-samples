@@ -143,7 +143,7 @@ jobs:
     
     env:
       EKS_CLUSTER: eks-cluster
-      EKS_REGION: us-west-2
+      EKS_REGION: us-east-1
 
     steps:
     - name: Check out code
@@ -162,10 +162,10 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-    - name: Set up kubectl
-      uses: aws-actions/setup-kubectl@v1
+    - name: Install kubectl
+      uses: azure/setup-kubectl@v2.0
       with:
-        version: '1.21'
+        version: 'v1.24.0'
     
     - name: Install eksctl
       run: |
