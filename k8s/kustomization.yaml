@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: artiseasy/hello-gitops
-  newTag: 44ce8c1faf964d21cdafda775e99c340dfbf0e63
+  newTag: 9f0d69971b03e8419724381e742e4504a62c3da5
